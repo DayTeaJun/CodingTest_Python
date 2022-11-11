@@ -26,13 +26,6 @@ for i in range(M):
     else:
         print(0)
         
-# 배열에서 K번째 수 찾기
-N = int(input()) # 리스트의 크기
-K = int(input()) # 구하고자 하는 index
-start = 1 # 시작 인덱스
-end = K # 종료 인덱스
-ans = 0 # 정답
-
 # 블루레이 만들기
 N, M = map(int, input().split()) # N 레슨 개수, M 블루레이 개수
 A = list(map(int, input().split())) # 기타 레슨 데이터 저장 리스트
@@ -61,8 +54,14 @@ while start <= end:
         end = middle - 1
 print(start)
 
-# 이진 탐색 수행
-while start <= end:
+# 배열에서 K번째 수 찾기
+N = int(input()) # 리스트의 크기
+K = int(input()) # 구하고자 하는 index
+start = 1 # 시작 인덱스
+end = K # 종료 인덱스
+ans = 0 # 정답
+
+while start <= end: # 이진 탐색 수행
     middle = int((start + end) / 2) # 중앙 인덱스
     cnt = 0 # 중앙값보다 작은 수
     # 중앙값보다 작은 수 계산
